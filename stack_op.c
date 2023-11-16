@@ -35,8 +35,8 @@ void mod_nodes(stack_t **stack, unsigned int line_number)
 	if ((*stack)->n == 0)
 		more_err(9, line_number);
 	(*stack) = (*stack)->next;
-	sum = (*stack)->n % (*stack)prev->n;
-	(*stack)->n sum;
+	sum = (*stack)->n % (*stack)->prev->n;
+	(*stack)->n = sum;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }

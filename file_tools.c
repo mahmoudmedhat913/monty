@@ -54,7 +54,7 @@ int parse_line(char *buffer, int line_number, int format)
 		err(4);
 
 	opcode = strtok(buffer, delim);
-	if (opcode == null)
+	if (opcode == NULL)
 		return (format);
 	value = strtok(NULL, delim);
 
@@ -63,7 +63,7 @@ int parse_line(char *buffer, int line_number, int format)
 	if (strcmp(opcode, "queue") == 0)
 		return (1);
 
-	find_fun(opcode, value, line_number, format);
+	find_func(opcode, value, line_number, format);
 	return (format);
 }
 
@@ -105,7 +105,7 @@ void find_func(char *opcode, char *value, int ln, int format)
 
 	for (flag = 1, i = 0; func_list[i].opcode != NULL; i++)
 	{
-		if (strcmp(opcode, fun_list[i].opcode) == 0)
+		if (strcmp(opcode, func_list[i].opcode) == 0)
 		{
 			call_fun(func_list[i].f, opcode, value, ln, format);
 			flag = 0;
@@ -149,8 +149,8 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 		if (format == 0)
 			func(&node, ln);
 		if (format == 1)
-			add_to_queue(&node, in);
+			add_to_queue(&node, ln);
 	}
 	else
-		fun(&head, ln);
+		func(&head, ln);
 }

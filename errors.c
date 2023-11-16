@@ -18,8 +18,8 @@ void err(int error_code, ...)
 	char *op;
 	int l_num;
 
-	va_start(ag, err_code);
-	switch (err_code)
+	va_start(ag, error_code);
+	switch (error_code)
 	{
 		case 1:
 			fprintf(stderr, "USAGE: monty file\n");
@@ -60,7 +60,7 @@ void more_err(int error_code, ...)
 	char *op;
 	int l_num;
 
-	va_start(ag, err_code);
+	va_start(ag, error_code);
 	switch (error_code)
 	{
 		case 6:
@@ -72,7 +72,7 @@ void more_err(int error_code, ...)
 					va_arg(ag, int));
 			break;
 		case 8:
-			l_num = va_arg(ag, unsined int);
+			l_num = va_arg(ag, unsigned int);
 			op = va_arg(ag, char *);
 			fprintf(stderr, "L%d: can't %s, stack too short\n", l_num, op);
 			break;
@@ -100,7 +100,7 @@ void string_err(int error_code, ...)
 
 	va_start(ag, error_code);
 	l_num = va_arg(ag, int);
-	switch (err_code)
+	switch (error_code)
 	{
 		case 10:
 			fprintf(stderr, "L%d: can't pchar, value out of range\n", l_num);

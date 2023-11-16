@@ -5,7 +5,7 @@
  * @new_node: Pointer to the new node.
  * @ln: Interger representing the line number of of the opcode.
  */
-void add_to_stack(stack_t **new_node, __attripute__((unused))unsigned int ln)
+void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
 
@@ -19,7 +19,7 @@ void add_to_stack(stack_t **new_node, __attripute__((unused))unsigned int ln)
 	tmp = *new_node;
 	head = *new_node;
 	head->next = tmp;
-	tmp->perv = head;
+	tmp->prev = head;
 }
 
 /**
@@ -35,7 +35,7 @@ void print_stack(stack_t **stack, unsigned int line_number)
 	if (stack == NULL)
 		exit(EXIT_FAILURE);
 	tmp = *stack;
-	while (tmp !NULL)
+	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
@@ -70,5 +70,5 @@ void print_top(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
 		more_err(6, line_number);
-	printf("%d\n, (*stack)->n);
+	printf("%d\n", (*stack)->n);
 }
