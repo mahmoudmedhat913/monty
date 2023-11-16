@@ -14,7 +14,7 @@ void print_char(stack_t **stack, unsigned int line_number)
 		string_err(11, line_number);
 	ascii = (*stack)->n;
 	if (ascii < 0 || ascii > 127)
-		string_err(1, line_number);
+		string_err(10, line_number);
 	printf("%c\n", ascii);
 }
 
