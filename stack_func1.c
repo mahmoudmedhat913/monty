@@ -16,7 +16,7 @@ void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
 		head = *new_node;
 		return;
 	}
-	tmp = *new_node;
+	tmp = head;
 	head = *new_node;
 	head->next = tmp;
 	tmp->prev = head;
@@ -56,7 +56,7 @@ void pop_top(stack_t **stack, unsigned int line_number)
 
 	tmp = *stack;
 	*stack = tmp->next;
-	if (stack != NULL)
+	if (*stack != NULL)
 		(*stack)->prev = NULL;
 	free(tmp);
 }
