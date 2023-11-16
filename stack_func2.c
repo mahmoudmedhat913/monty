@@ -72,6 +72,8 @@ void sub_nodes(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 
+
+
 /**
  * div_nodes - divide top 2 elements
  * @stack: pointer to pointer
