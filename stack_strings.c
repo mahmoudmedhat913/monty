@@ -18,6 +18,8 @@ void print_char(stack_t **stack, unsigned int line_number)
 	printf("%c\n", ascii);
 }
 
+
+
 /**
  * print_str - print string
  * @stack: pointer to pointer
