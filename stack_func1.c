@@ -61,6 +61,8 @@ void pop_top(stack_t **stack, unsigned int line_number)
 	free(tmp);
 }
 
+
+
 /**
  * print_top - Prints the top node of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
