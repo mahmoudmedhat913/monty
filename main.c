@@ -56,6 +56,8 @@ void free_nodes(void)
 	}
 }
 
+
+
 /**
  * add_to_queue - Adds a node to the queue.
  * @new_node: Pointer to the new node.
