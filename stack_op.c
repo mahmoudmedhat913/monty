@@ -19,6 +19,8 @@ void mul_nodes(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 
+
+
 /**
  * mod_nodes - Adds the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
