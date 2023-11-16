@@ -115,6 +115,8 @@ void find_func(char *opcode, char *value, int ln, int format)
 		err(3, ln, opcode);
 }
 
+
+
 /**
  * call_fun - Calls the required function.
  * @func: Pointer to the function that is about to be called.
